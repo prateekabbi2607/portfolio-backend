@@ -54,26 +54,11 @@ app.use("/socialMediaApi", require("./routes/socialMediaLinks"));
 app.use("/uploadImage", require("./routes/uploadImage"));
 app.use("/messagesApi", require("./routes/contactMe"));
 
-const _dirname = path.resolve();
-
-if (process.env.NODE_ENV === "production") {
-  // app.use(express.static(path.join(_dirname, "/frontend/build")));
-  console.log("Running Successfully!");
-  // app.get("*", (req, res) =>
-  //   res.sendFile(path.resolve(_dirname, "frontend", "build", "index.html"))
-  // );
-} else {
-  console.log("Hi");
-}
-
 app.get("/", (req, res) => {
   res.send("API is running..");
 });
 
-let port = process.env.PORT || 5000;
-if (port == null || port == "") {
-  port = 5000;
-}
+let port = 5000;
 
 app.listen(port, function () {
   console.log(`Server running on port ${port}.`);
