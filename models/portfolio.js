@@ -1,13 +1,10 @@
 const mongoose = require("mongoose");
 
 const portfolioSchema = new mongoose.Schema({
-  recentworks: [
-    {
-      title: String,
-      description: String,
-      imageURL: Array,
-    },
-  ],
+  title: String,
+  description: String,
+  gitHubRepo: String,
+  imageURL: Array,
 });
 
 const Portfolio = new mongoose.model("Portfolio", portfolioSchema);

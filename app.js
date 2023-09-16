@@ -51,6 +51,7 @@ app.use("/changePasswordApi", require("./routes/logIn"));
 app.use("/aboutApi", require("./routes/about"));
 app.use("/resumeApi", require("./routes/resume"));
 app.use("/socialMediaApi", require("./routes/socialMediaLinks"));
+app.use("/portfolioApi", require("./routes/portfolio"));
 app.use("/uploadImage", require("./routes/uploadImage"));
 app.use("/messagesApi", require("./routes/contactMe"));
 
